@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maine Event Rentals — Shock & Awe Preview</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+var GALLERY = ['assets/images/shot_06.webp','assets/images/shot_07.webp','assets/images/shot_08.webp','assets/images/shot_09.webp','assets/images/shot_10.webp','assets/images/shot_11.webp','assets/images/shot_12.webp','assets/images/shot_13.webp','assets/images/shot_14.webp','assets/images/shot_15.webp','assets/images/shot_16.webp','assets/images/shot_17.webp','assets/images/shot_18.webp','assets/images/shot_19.webp','assets/images/shot_20.webp','assets/images/shot_21.webp','assets/images/shot_22.webp','assets/images/shot_23.webp','assets/images/shot_24.webp'];
+</script>
+<script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="logo"></span>
+      <div class="title">
+        <span class="kicker">Bangor, Maine • Weddings • Parties • Live Events</span>
+        <h1>Maine Event Rentals</h1>
+      </div>
+    </div>
+    <div>
+      <a class="button secondary" href="#gallery">Gallery</a>
+      <a class="button" href="#quote">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="assets/images/shot_06.webp" alt="Event tent hero">
+  <div class="inner">
+    <h2>Shock & Awe: This is what your event looks like with us.</h2>
+    <p>Crystal‑clear roof options, bistro lighting, clean lines, and setups that actually photograph beautifully. Serving ~2 hours around Bangor, ME.</p>
+    <a class="button" href="#quote">Start Your Quote</a>
+  </div>
+</section>
+
+<section class="container" id="quote">
+  <div class="section-head"><h3>Instant Quote (Preview)</h3><span>Demo pricing</span></div>
+  <div class="quote">
+    <div class="row">
+      <div><label>Date</label><input type="date"></div>
+      <div><label>Location</label><input type="text" placeholder="Bangor, ME"></div>
+      <div><label>Guest Count</label><input type="number" placeholder="150"></div>
+    </div>
+    <div class="row">
+      <div><label>Add 40x60 Pole Tent</label><button class="button" onclick="addToQuote('tents','pole-40x60')">Add</button></div>
+      <div><label>Add 8ft Tables</label><button class="button" onclick="addToQuote('tables','table-8ft')">Add</button></div>
+      <div><label>Add White Chairs</label><button class="button" onclick="addToQuote('chairs','chair-white')">Add</button></div>
+    </div>
+    <div class="row">
+      <div><label>Delivery Distance (mi)</label><input id="miles" type="number" value="40" oninput="renderSummary()"></div>
+      <div></div><div></div>
+    </div>
+
+    <div id="summary-list"></div>
+    <div class="summary"><div>Subtotal</div><div id="subtotal">$0.00</div></div>
+    <div class="summary"><div>Estimated Delivery</div><div id="delivery">$0.00</div></div>
+    <div class="summary"><div style="font-weight:800">Estimated Total</div><div id="total">$0.00</div></div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-head"><h3>Recent Setups</h3></div>
+  <div id="gallery" class="gallery"></div>
+</section>
+
+<footer class="footer">
+  <div>© Maine Event Rentals • 207‑403‑0707 • maineeventrentals@yahoo.com</div>
+  <div class="small">Working preview with optimized images for fast sharing.</div>
+</footer>
+</body>
+</html>
